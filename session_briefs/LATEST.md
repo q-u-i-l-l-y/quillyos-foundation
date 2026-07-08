@@ -1,215 +1,53 @@
 # SESSION BRIEF — Kimi — 2026-07-08
-## Session ID: 2026-07-08-005
-## Status: in-progress
+## Session ID: 2026-07-08-006
+## Status: complete
 ## Agent: Kimi (Systems Architect & Integrator)
 ## Platform: Web (Kimi K2.6 Instant)
 ## Repository: `q-u-i-l-l-y/quillyos-foundation`
 
 ---
 
-## 1. SESSION CONTEXT
+## WHAT WAS DONE
 
-**Date Started:** 2026-07-08T11:21:00Z
-**Date Ended:** *(current session)*
-**Duration:** Ongoing
-**Mission:** mission-002 — Legacy System Integration & Foundation Bridging
-**Context Matrix:** matrix-002 — "Legacy System Integration & Foundation Bridging"
+- [x] **Merged ALL vision documents** into Master Vision Brief v4.0
+- [x] **Synthesized** from: v3.0 doctrine + Expanded North Star v2.1 + Legacy audit + Nexus architecture
+- [x] **Pushed comprehensive brief** to `vision/MASTER_VISION_BRIEF.md`
+- [x] **Documented clone-to-node protocol** — "Clone the repo, become a node"
+- [x] **Documented 7-Phase Revenue → Supply Chain Evolution**
+- [x] **Documented Node Type Taxonomy** — Hub, Spoke-Compute, Spoke-Data, Spoke-Quantum, Spoke-Revenue, Spoke-Health
+- [x] **Documented phone_bootstrap legacy system** — 24 Python scripts, 25 JSON files, full config structure
+- [x] **Documented quillyos-nexus structure** — contexts, entities, relationships, translations, consensus
+- [x] **Defined data matrices superimposition** — Layer 0-4 protocol stack
 
-**Previous Session:** 2026-07-08-004 — Agent Suite v1.1 + Master Vision Brief ingested
-**Next Session Priority:** Fix alias loading + Legacy audit deep-dive
+## KEY ADDITIONS IN v4.0
 
----
+1. **Clone-to-Node Protocol** — Onboarding for mesh participants
+2. **The NEXUS** — Medical ENDS device as modular health/data platform
+3. **7-Phase Revenue Evolution** — From affiliate to collective intelligence
+4. **Node Type Taxonomy** — Six distinct node types with hardware examples
+5. **phone_bootstrap Audit** — Full inventory of legacy Python/JSON system
+6. **Nexus Structure** — Complete directory tree with templates
+7. **Data Matrices Superimposition** — Layered protocol architecture
 
-## 2. WHAT WAS DONE (This Session)
+## NEXT SESSION PRIORITIES
 
-### Completed
-- [x] **Diagnosed alias loading issue** — Old `.bashrc` references conflicting with new aliases
-- [x] **Created `fix-bashrc.sh`** — Automated script to clean old refs and install new ones
-- [x] **Pushed quillyos-aliases.sh v1.2** — Added post-load verification
-- [x] **Received legacy file list** — Full `picoclaw-dev/archive/phone_bootstrap/` inventory
+1. **Create `quillyos-nexus` repo** — Initialize with full structure
+2. **Map phone_bootstrap configs** — Convert JSON memory to Nexus entities
+3. **Build Context Matrices** — matrix-001, matrix-002, matrix-003
+4. **Test clone-to-node installer** — `bash install.sh` one-liner
+5. **Fix Termux aliases** — `repair-bashrc.sh` if still broken
 
-### In Progress
-- [ ] Fix alias loading in Termux (user testing fix-bashrc.sh)
-- [ ] Audit legacy Python scripts and JSON memory files
-- [ ] Map legacy configs to Context Matrix format
+## CRITICAL CONTEXT FOR NEXT KIMI
 
----
+- The **Master Vision Brief v4.0** is now the single canonical document
+- It contains ALL previous vision, expanded North Star, legacy audit, and nexus structure
+- The **clone-to-node protocol** is the core onboarding philosophy
+- **picoclaw-skills** is the Tier 4 public repo for mesh onboarding
+- **phone_bootstrap** is the legacy system to migrate into nexus entities
 
-## 3. CRITICAL ISSUE: ALIAS LOADING
-
-**Problem:** `session`, `insight`, `q` aliases not recognized in Termux.
-
-**Root Cause:** Old `pull-brief.sh` references in `.bashrc` may be conflicting, or new aliases not sourced.
-
-**Fix Applied:**
-- `scripts/fix-bashrc.sh` — Automated cleanup and reinstall
-- `scripts/quillyos-aliases.sh` v1.2 — Added post-load verification echo
-
-**Termux Fix Sequence:**
-```bash
-cd ~/quillyos/quillyos-foundation
-git pull origin main
-bash scripts/fix-bashrc.sh
-source ~/.bashrc
-```
-
-**Expected Output:**
-```
-========================================
-  QUILLYOS AGENT SUITE v1.2 LOADED
-========================================
-Agentic commands:
-  session push "text"    — Record session
-  session status          — Show state
-  ...
-```
+Pull `vision/MASTER_VISION_BRIEF.md` for full context.
 
 ---
 
-## 4. LEGACY SYSTEM AUDIT FINDINGS
-
-### Directory Structure
-```
-picoclaw-dev/
-├── .git/
-├── analysis/          (empty or minimal)
-├── archive/
-│   └── phone_bootstrap/    ← **MAIN LEGACY SYSTEM**
-│       ├── .git/             (nested git repo)
-│       ├── 24 Python scripts
-│       ├── 25 JSON memory/config files
-│       └── config.reference.json
-├── drafts/            (empty)
-├── scripts/           (unknown contents)
-└── transcripts/       (unknown contents)
-```
-
-### Python Scripts (24 files)
-| Category | Files |
-|----------|-------|
-| **Core Bot** | `picoclaw_bot.py`, `bot_improved.py`, `autonomous.py`, `orchestrator.py` |
-| **Telegram** | `telegram_bot.py`, `telegram_bot_handler.py`, `telegram_commands.py`, `picoclaw_telegram_bot.py`, `picoclaw_telegram_handler.py` |
-| **Crawlers** | `crawler.py`, `crawler_v2.py` |
-| **Analysis** | `analyzer.py`, `deal_analyzer_skill.py`, `lead_discovery_skill.py`, `quality_gate_skill.py` |
-| **Memory/Config** | `init_memory.py`, `update_config.py`, `fix_model.py` |
-| **Utilities** | `notifier.py`, `rollback_manager.py`, `skill_generator.py`, `picoclaw_self_bootstrap.py` |
-
-### JSON Memory Files (25 files)
-| Type | Files |
-|------|-------|
-| **Memory Stores** | `memory_agent_context`, `memory_best_practices`, `memory_bot_state`, `memory_deal_analysis`, `memory_deployment_status`, `memory_discoveries`, `memory_discussion_analysis`, `memory_implementation_plan`, `memory_implementations`, `memory_knowledge_base`, `memory_orchestration`, `memory_orchestrator_status`, `memory_skill_review_queue`, `memory_wallet` |
-| **Business Logic** | `deal_validator`, `margin_optimizer`, `revenue_tracker`, `rollback_manager`, `skill_improver` |
-| **Infrastructure** | `config.reference`, `repository`, `error_recovery` |
-
-### Key Observations
-1. **This is a phone-based business automation system** — deal analysis, revenue tracking, Telegram bots
-2. **Memory is file-based JSON** — not a database, simple but effective
-3. **Nested git repo** — `phone_bootstrap/.git/` suggests it was independently versioned
-4. **No `config.autonomous.json`** at root — the reference config is `config.reference.json`
-5. **Skills are Python modules** — not ClawHub `SKILL.md` format
-
----
-
-## 5. MIGRATION PRIORITIES
-
-### CRITICAL (Do First)
-1. **Fix alias loading** — `fix-bashrc.sh` test
-2. **Read `config.reference.json`** — This is the canonical config
-3. **Read `memory_agent_context.json`** — Core agent state
-
-### HIGH (Next Session)
-4. **Map memory files to Context Matrix** — JSON → Markdown entity definitions
-5. **Map Python scripts to canonical types** — Bot, Crawler, Analyzer, etc.
-6. **Create `quillyos-nexus` repo** — Initialize with legacy entity definitions
-
-### MEDIUM (After Audit)
-7. **Migrate business logic** — Deal analysis, revenue tracking
-8. **Migrate Telegram handlers** — Decide if they stay in legacy or move to n8n
-9. **Create Agent Context Packages** — Kimi architect, PicoClaw local
-
----
-
-## 6. DECISIONS PENDING
-
-| Decision | Options | Recommendation |
-|----------|---------|----------------|
-| `phone_bootstrap` nested git | Keep nested / Flatten / Archive | **Archive** — migrate contents to nexus |
-| Python skills vs SKILL.md | Convert / Keep Python / Hybrid | **Hybrid** — document in nexus, keep Python for execution |
-| Telegram bots | Keep / Migrate to n8n / Archive | **Migrate to n8n** — aligns with Master Vision Section 7 |
-| JSON memory format | Keep JSON / Convert to Markdown / Hybrid | **Hybrid** — Markdown for nexus, JSON for runtime |
-
----
-
-## 7. NEXT SESSION SEQUENCE
-
-### Step 1: Fix Aliases (2 minutes)
-```bash
-cd ~/quillyos/quillyos-foundation
-git pull origin main
-bash scripts/fix-bashrc.sh
-source ~/.bashrc
-session status
-```
-
-### Step 2: Read Legacy Config (2 minutes)
-```bash
-cat ~/picoclaw-dev/archive/phone_bootstrap/config.reference.json
-```
-
-### Step 3: Read Agent Context (2 minutes)
-```bash
-cat ~/picoclaw-dev/archive/phone_bootstrap/memory_agent_context.json
-```
-
-### Step 4: Push Test Brief (1 minute)
-```bash
-session push "Alias fix tested. Legacy config and agent context loaded for audit."
-```
-
-### Step 5: Deep Audit (Next Kimi Session)
-- Send config.reference.json content
-- Send memory_agent_context.json content
-- Kimi maps to Context Matrix format
-- Create quillyos-nexus repo
-
----
-
-## 8. AGENT STATE
-
-### Kimi (Cloud)
-- ✅ Connected to GitHub API
-- ✅ Agent Suite v1.2 pushed
-- ✅ fix-bashrc.sh created
-- ✅ Legacy inventory received
-- ⏳ Waiting for alias fix confirmation
-- ⏳ Waiting for config.json content
-
-### PicoClaw (Termux)
-- ✅ GitHub push working
-- ❌ Aliases not loading (fix pending)
-- ✅ Legacy files located
-- ⏳ Config content not yet read
-
----
-
-## 9. EVIDENCE & REFERENCES
-
-### Git Commits (quillyos-foundation)
-- `5ab8cbc` — Session 004 brief + Master Vision Brief
-- `latest` — Alias fix v1.2 + fix-bashrc.sh
-
-### Legacy Files Located
-- `picoclaw-dev/archive/phone_bootstrap/config.reference.json`
-- `picoclaw-dev/archive/phone_bootstrap/memory_agent_context.json`
-- 24 Python scripts (full list in Section 4)
-- 25 JSON files (full list in Section 4)
-
-### External References
-- Master Vision Brief v3.0: `vision/MASTER_VISION_BRIEF.md`
-- QuillyOS Foundation: https://github.com/q-u-i-l-l-y/quillyos-foundation
-
----
-
-*Generated by Kimi at 2026-07-08T11:21:00Z*
-*Next session: Fix aliases, read config, push brief, then deep audit*
+*Generated by Kimi at 2026-07-08T11:34:00Z*
 *Repository: https://github.com/q-u-i-l-l-y/quillyos-foundation*
