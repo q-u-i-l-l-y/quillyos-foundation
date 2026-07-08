@@ -1,0 +1,27 @@
+# QuillyOS Foundation — Git Ignore
+
+# Session briefs are versioned but temporary
+# (They live in Git history but may be cleaned from working tree)
+# session_briefs/*.md
+# !session_briefs/LATEST.md
+
+# Local configuration
+config.local.json
+.env
+secrets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
