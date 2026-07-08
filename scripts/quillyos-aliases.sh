@@ -1,27 +1,26 @@
 # =============================================================================
-# QUILLYOS AGENT SUITE — Shell Aliases
-# Install: Add 'source ~/.quillyos/quillyos-agent-suite.sh' to ~/.bashrc
-# Or: Copy this block into ~/.bashrc directly
+# QUILLYOS AGENT SUITE — Shell Aliases v1.1
+# Install: source ~/.quillyos/quillyos-aliases.sh
 # =============================================================================
 
-# Main dispatcher
 quillyos() {
     bash "$HOME/.quillyos/quillyos-agent-suite.sh" "$@"
 }
 
-# Legacy handoff aliases (backward compatible)
+# Legacy handoff aliases
 alias pull-brief='quillyos pull-brief'
 alias pull-brief-clip='quillyos pull-brief-clip'
 alias pull-brief-kimi='quillyos pull-brief-kimi'
 alias push-brief='quillyos push-brief'
 
-# New agentic aliases (plain language)
+# Agentic aliases
 alias session='quillyos session'
 alias insight='quillyos insight'
 
-# PicoClaw bridge aliases
+# PicoClaw bridge aliases (corrected)
 alias picoclaw-status='quillyos picoclaw-status'
-alias picoclaw-chat='quillyos picoclaw-chat'
+alias picoclaw-agent='quillyos picoclaw-agent'
+alias picoclaw-config='quillyos picoclaw-config'
 
 # Quick reference aliases
 alias qstatus='quillyos qstatus'
@@ -33,6 +32,7 @@ alias qagents='quillyos qagents'
 alias qontology='quillyos qontology'
 alias qprotocol='quillyos qprotocol'
 alias qhandoff='quillyos qhandoff'
+alias qvision='quillyos qvision'
 
-# Convenience: type 'q' for quick status
+# Quick status
 alias q='quillyos session status'

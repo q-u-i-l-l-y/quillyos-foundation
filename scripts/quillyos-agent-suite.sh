@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # =============================================================================
-# QUILLYOS AGENT SUITE v1.0
+# QUILLYOS AGENT SUITE v1.1 — CORRECTED
 # Unified command interface for PicoClaw-Termux agentic layer
-# Plain-language session handoff + legacy PicoClaw bridge
+# Reconciled with Sipeed PicoClaw Go binary structure
 # Repository: q-u-i-l-l-y/quillyos-foundation
 # =============================================================================
 
@@ -11,7 +11,8 @@ REPO_URL="https://github.com/q-u-i-l-l-y/quillyos-foundation"
 REPO_DIR="$HOME/quillyos/quillyos-foundation"
 BRIEF_DIR="$REPO_DIR/session_briefs"
 LATEST_BRIEF="$BRIEF_DIR/LATEST.md"
-NEXUS_DIR="$HOME/quillyos/quillyos-nexus"  # Future
+PICOCLAW_WORKSPACE="$HOME/.picoclaw"
+PICOCLAW_CONFIG="$PICOCLAW_WORKSPACE/config.json"
 
 # Colors
 RED='\033[0;31m'
@@ -19,16 +20,12 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 CYAN='\033[0;36m'
-NC='\033[0m' # No Color
-
-# =============================================================================
-# CORE FUNCTIONS
-# =============================================================================
+NC='\033[0m'
 
 show_header() {
     echo -e "${CYAN}"
     echo "========================================"
-    echo "  QUILLYOS AGENT SUITE v1.0"
+    echo "  QUILLYOS AGENT SUITE v1.1"
     echo "  PicoClaw · Kimi · Nexus Protocol"
     echo "========================================"
     echo -e "${NC}"
@@ -165,7 +162,6 @@ $(if [ -f "$REPO_DIR/.session_notes" ]; then cat "$REPO_DIR/.session_notes"; els
 *Repository: $REPO_URL*
 EOF
 
-    # Update LATEST.md
     cp "$BRIEF_FILE" "$LATEST_BRIEF"
 
     echo -e "${BLUE}[INFO] Committing and pushing...${NC}"
@@ -179,11 +175,6 @@ EOF
         echo -e "${GREEN}========================================${NC}"
         echo ""
         echo "Brief: ${BRIEF_FILE}"
-        echo "Location: session_briefs/"
-        echo ""
-        echo "Next session: run pull-brief"
-
-        # Clear session notes after push
         rm -f "$REPO_DIR/.session_notes"
     else
         echo -e "${RED}[ERROR] Push failed.${NC}"
@@ -275,38 +266,76 @@ cmd_insight_list() {
 }
 
 # =============================================================================
-# LEGACY PICOCLAW BRIDGE
+# PICOCLAW (SIPEED) BRIDGE — CORRECTED
 # =============================================================================
+# PicoClaw is a Go binary. Verified commands:
+#   picoclaw              — Show help / version
+#   picoclaw agent        — Interactive agent mode (Ctrl+C to exit)
+#   picoclaw version      — Show version
+# It connects to local LLM at http://127.0.0.1:11435 (Ollama API)
+# Skills loaded from ~/.picoclaw/skills/ as SKILL.md files
+# Config at ~/.picoclaw/config.json
 
 cmd_picoclaw_status() {
+    echo -e "${CYAN}=== PICOCLAW STATUS ===${NC}"
+    echo ""
+
     if command -v picoclaw &> /dev/null; then
         echo -e "${GREEN}[✓] PicoClaw binary found.${NC}"
-        picoclaw version 2>/dev/null || echo "Version check failed."
-
-        if [ -d "$HOME/.picoclaw" ]; then
-            echo -e "${GREEN}[✓] PicoClaw workspace exists.${NC}"
-            echo "Config: $HOME/.picoclaw/config.json"
-            echo "Workspace: $HOME/.picoclaw/workspace/"
-        else
-            echo -e "${YELLOW}[!] PicoClaw not initialized. Run: picoclaw onboard${NC}"
-        fi
+        picoclaw version 2>/dev/null || echo "  (version check failed)"
     else
-        echo -e "${YELLOW}[!] PicoClaw binary not found.${NC}"
-        echo "Download: wget https://github.com/sipeed/picoclaw/releases/latest/download/picoclaw_Linux_arm64.tar.gz"
+        echo -e "${YELLOW}[!] PicoClaw binary not found in PATH.${NC}"
+        echo "  Expected: ~/picoclaw or ~/go/bin/picoclaw"
+    fi
+
+    if [ -d "$PICOCLAW_WORKSPACE" ]; then
+        echo -e "${GREEN}[✓] PicoClaw workspace exists.${NC}"
+        echo "  Workspace: $PICOCLAW_WORKSPACE"
+        echo "  Config: $PICOCLAW_CONFIG"
+
+        if [ -f "$PICOCLAW_CONFIG" ]; then
+            echo -e "${GREEN}[✓] Config file exists.${NC}"
+        else
+            echo -e "${YELLOW}[!] Config file missing.${NC}"
+        fi
+
+        SKILL_COUNT=$(find "$PICOCLAW_WORKSPACE/skills" -name "SKILL.md" 2>/dev/null | wc -l)
+        echo "  Skills installed: $SKILL_COUNT"
+    else
+        echo -e "${YELLOW}[!] PicoClaw workspace not initialized.${NC}"
+        echo "  Run: picoclaw onboard (if available)"
+    fi
+
+    # Check LLM endpoint
+    echo ""
+    echo -e "${CYAN}LLM Endpoint Check:${NC}"
+    if curl -s http://127.0.0.1:11435/api/tags 2>/dev/null | grep -q "models"; then
+        echo -e "${GREEN}[✓] Ollama responding at 127.0.0.1:11435${NC}"
+    else
+        echo -e "${YELLOW}[!] Ollama not responding at 127.0.0.1:11435${NC}"
+        echo "  Start with: ollama serve &"
+        echo "  Or install: pkg install ollama (if available)"
     fi
 }
 
-cmd_picoclaw_chat() {
-    if [ -z "$1" ]; then
-        echo -e "${RED}[ERROR] Usage: picoclaw-chat \"Your message\"${NC}"
-        exit 1
-    fi
-
+cmd_picoclaw_agent() {
     if command -v picoclaw &> /dev/null; then
-        echo -e "${BLUE}[PicoClaw] $1${NC}"
-        picoclaw agent -m "$1" 2>/dev/null || echo "PicoClaw agent execution failed."
+        echo -e "${CYAN}Starting PicoClaw interactive agent...${NC}"
+        echo -e "${YELLOW}Press Ctrl+C to exit${NC}"
+        echo ""
+        picoclaw agent
     else
         echo -e "${RED}[ERROR] PicoClaw not installed.${NC}"
+        echo "Download from: https://github.com/sipeed/picoclaw/releases"
+    fi
+}
+
+cmd_picoclaw_config() {
+    if [ -f "$PICOCLAW_CONFIG" ]; then
+        echo -e "${CYAN}=== PICOCLAW CONFIG ===${NC}"
+        cat "$PICOCLAW_CONFIG" | python -m json.tool 2>/dev/null || cat "$PICOCLAW_CONFIG"
+    else
+        echo -e "${RED}[ERROR] Config not found at $PICOCLAW_CONFIG${NC}"
     fi
 }
 
@@ -361,6 +390,11 @@ cmd_qhandoff() {
     cat "$REPO_DIR/protocol/SESSION_HANDOFF.md" 2>/dev/null || echo "Handoff spec not found."
 }
 
+cmd_qvision() {
+    check_repo
+    cat "$REPO_DIR/vision/MASTER_VISION_BRIEF.md" 2>/dev/null || echo "Master Vision Brief not found."
+}
+
 # =============================================================================
 # MAIN DISPATCH
 # =============================================================================
@@ -379,13 +413,14 @@ show_help() {
     echo "  session push \"text\"    — Alias for push-brief (plain language)"
     echo "  session status          — Show current session state"
     echo "  session log             — List all session briefs"
-    echo "  session sync            — Pull latest + check sync status"
+    echo "  session sync            — Sync with GitHub"
     echo "  insight add \"text\"     — Record insight (accumulates until push)"
     echo "  insight list            — Show pending insights"
     echo ""
-    echo -e "${CYAN}LEGACY PICOCLAW BRIDGE${NC}"
-    echo "  picoclaw-status         — Check PicoClaw daemon/workspace"
-    echo "  picoclaw-chat \"text\"   — Send message to PicoClaw agent"
+    echo -e "${CYAN}PICOCLAW (SIPEED) BRIDGE${NC}"
+    echo "  picoclaw-status         — Check binary, workspace, LLM endpoint"
+    echo "  picoclaw-agent          — Start interactive agent mode"
+    echo "  picoclaw-config         — Display PicoClaw config.json"
     echo ""
     echo -e "${CYAN}QUICK REFERENCE${NC}"
     echo "  qstatus                 — Check git status"
@@ -397,27 +432,25 @@ show_help() {
     echo "  qontology               — Display canonical object types"
     echo "  qprotocol               — Display Nexus Protocol spec"
     echo "  qhandoff                — Display handoff mechanism"
+    echo "  qvision                 — Display Master Vision Brief v3.0"
     echo ""
     echo -e "${CYAN}PLAIN-LANGUAGE EXAMPLES${NC}"
     echo "  session push \"Verified Termux auth. Ready for legacy audit.\""
     echo "  insight add \"Need to map config.autonomous.json to Context Matrix\""
-    echo "  picoclaw-chat \"What skills are installed?\""
+    echo "  picoclaw-agent          — Start PicoClaw interactive mode"
     echo ""
     show_footer
 }
 
-# Determine which command to run
 COMMAND="$1"
 shift || true
 
 case "$COMMAND" in
-    # Legacy aliases (backward compatible)
     pull-brief)          cmd_pull_brief ;;
     pull-brief-clip)     cmd_pull_brief_clip ;;
     pull-brief-kimi)     cmd_pull_brief_kimi ;;
     push-brief)          cmd_push_brief "$*" ;;
 
-    # New agentic commands
     session)
         SUBCMD="$1"
         shift || true
@@ -440,11 +473,10 @@ case "$COMMAND" in
         esac
         ;;
 
-    # PicoClaw bridge
     picoclaw-status)     cmd_picoclaw_status ;;
-    picoclaw-chat)       cmd_picoclaw_chat "$*" ;;
+    picoclaw-agent)      cmd_picoclaw_agent ;;
+    picoclaw-config)     cmd_picoclaw_config ;;
 
-    # Quick reference
     qstatus)             cmd_qstatus ;;
     qcd)                 cmd_qcd ;;
     qfoundation)         cmd_qfoundation ;;
@@ -454,8 +486,8 @@ case "$COMMAND" in
     qontology)           cmd_qontology ;;
     qprotocol)           cmd_qprotocol ;;
     qhandoff)            cmd_qhandoff ;;
+    qvision)             cmd_qvision ;;
 
-    # Help / default
     help|--help|-h|"")
         show_help ;;
 
