@@ -6,7 +6,7 @@
 
 set -e
 
-REPO_URL="https://github.com/YOUR_USERNAME/quillyos-foundation.git"
+REPO_URL="https://github.com/q-u-i-l-l-y/quillyos-foundation.git"
 LOCAL_DIR="$HOME/quillyos-foundation"
 BRIEF_DIR="$LOCAL_DIR/session_briefs"
 LATEST_FILE="$BRIEF_DIR/LATEST.md"
