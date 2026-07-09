@@ -1,0 +1,110 @@
+{
+  "matrix_id": "foundation-matrix-v4-1-0",
+  "repository": "quillyos-foundation",
+  "version": "4.1.0",
+  "generated_at": "2026-07-09T01:30:00Z",
+  "immutable_principles": [
+    "VISION.md#the-north-star",
+    "VISION.md#immutable-vision",
+    "VISION.md#health-as-the-central-organizing-principle",
+    "VISION.md#final-principle",
+    "ETHICS.md#principles"
+  ],
+  "evolving_documents": [
+    "ROADMAP.md",
+    "REVENUE_MODEL.md",
+    "ARCHITECTURE.md",
+    "IDENTITY.md",
+    "GLOSSARY.md"
+  ],
+  "superposition": {
+    "foundation": {
+      "principles": [
+        "VISION.md",
+        "MISSION.md",
+        "ETHICS.md"
+      ],
+      "dependencies": [],
+      "exports": [
+        "All canonical documents"
+      ]
+    },
+    "nexus": {
+      "protocols": [
+        "SPEC.md",
+        "SUPERPOSITION.md",
+        "AGENT_SCHEMA.md"
+      ],
+      "dependencies": [
+        "quillyos-foundation/VISION.md#the-nexus-protocol"
+      ],
+      "exports": [
+        "nexus_matrix.json"
+      ]
+    },
+    "knowledge_base": {
+      "discoveries": [
+        "crawl/",
+        "research/",
+        "medical/",
+        "metamaterials/",
+        "quantum/"
+      ],
+      "dependencies": [
+        "quillyos-foundation/VISION.md#health-as-the-central-organizing-principle"
+      ],
+      "exports": [
+        "knowledge_index.md"
+      ]
+    },
+    "skills": {
+      "capabilities": [
+        "skills/business/",
+        "skills/medical/",
+        "skills/quantum/",
+        "skills/metamaterials/"
+      ],
+      "dependencies": [
+        "quillyos-foundation/REVENUE_MODEL.md",
+        "quillyos-foundation/ROADMAP.md"
+      ],
+      "exports": [
+        "manifests/master.json"
+      ]
+    },
+    "runtime": {
+      "executors": [
+        "runtime/picostart.py",
+        "agents/",
+        "orchestrator/"
+      ],
+      "dependencies": [
+        "quillyos-foundation/ARCHITECTURE.md#progressive-capability"
+      ],
+      "exports": [
+        "memory/",
+        "logs/"
+      ]
+    }
+  },
+  "cross_references": [
+    {
+      "from": "VISION.md#health-as-the-central-organizing-principle",
+      "to": "quillyos-knowledge-base/medical/",
+      "relationship": "organizes",
+      "confidence": 1.0
+    },
+    {
+      "from": "VISION.md#the-bridge",
+      "to": "quillyos-nexus/translation/",
+      "relationship": "requires",
+      "confidence": 1.0
+    },
+    {
+      "from": "REVENUE_MODEL.md",
+      "to": "picoclaw-skills/skills/business/",
+      "relationship": "funds",
+      "confidence": 0.95
+    }
+  ]
+}
