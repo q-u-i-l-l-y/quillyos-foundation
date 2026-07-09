@@ -1,5 +1,5 @@
 # QUILLYOS // GLOSSARY
-## Version 4.0 — Living Document
+## Version 4.1 — Living Document
 ### Status: Canonical Truth
 
 ---
@@ -7,7 +7,7 @@
 | Term | Definition |
 |------|------------|
 | **Nexus** | The translation protocol that enables shared understanding across all participants |
-| **Matrix** | A structured data mapping that correlates information across repositories |
+| **Matrix** | A structured data mapping that correlates information across repositories and domains |
 | **Superposition** | The state where information exists in multiple overlapping layers simultaneously |
 | **Node** | A participant in the mesh — human, AI, or hardware |
 | **Hub** | The central reasoning layer that coordinates across nodes |
@@ -27,6 +27,14 @@
 | **Canonical Memory** | GitHub as the single source of truth for all ecosystem knowledge |
 | **Living Document** | A document that evolves through evidence, implementation, and review |
 | **DMSP** | Distributed Mesh Synchronization Protocol — the breathing loop of the ecosystem |
+| **Progressive Capability** | The principle that low-compute devices never become obsolete |
+| **Adaptive Portfolio** | The revenue model that evolves through autonomous research |
+| **Immutable Vision** | The North Star, long-term vision, and ethical pursuit that remain fixed |
+| **Evolving Implementation** | The route that continuously improves while the destination remains fixed |
+| **Health Node** | A personal compute layer dedicated to biometric observation and correlation |
+| **Cross-domain Correlation** | The process of linking evidence across medicine, engineering, logistics, and materials science |
+| **Protocol Evolution** | The continuous improvement of the Nexus Protocol while maintaining backward compatibility |
+| **Knowledge Immortality** | The principle that no knowledge is lost — every discovery is preserved with full context |
 
 ---
 
