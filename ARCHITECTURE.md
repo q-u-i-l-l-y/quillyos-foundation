@@ -1,5 +1,5 @@
 # QUILLYOS // ARCHITECTURE
-## Version 4.0 — Living Document
+## Version 4.1 — Living Document
 ### Status: Canonical Truth
 
 ---
@@ -10,8 +10,10 @@ The ecosystem is organized into five canonical repositories, each with a single,
 well-defined responsibility. The Hub (Quilly) reasons across them through the
 Nexus Protocol.
 
+Governance emerges from interaction rather than centralization.
+
 ```
-quillyos-foundation/      — Canonical Truth
+quillyos-foundation/      — Canonical Truth (Defines philosophy)
     ├── VISION.md
     ├── MISSION.md
     ├── ETHICS.md
@@ -26,7 +28,7 @@ quillyos-foundation/      — Canonical Truth
         ├── decision-framework.md
         └── reasoning-principles.md
 
-quillyos-nexus/           — Translation Layer
+quillyos-nexus/           — Translation Layer (Defines translation)
     ├── SPEC.md
     ├── NEXUS_PROTOCOL.md
     ├── SUPERPOSITION.md
@@ -48,7 +50,7 @@ quillyos-nexus/           — Translation Layer
         ├── raspberrypi.md
         └── superposition.md
 
-quillyos-knowledge-base/  — Persistent Memory
+quillyos-knowledge-base/  — Persistent Memory (Stores evidence)
     ├── README.md
     ├── knowledge_index.md
     ├── nexus_matrix.json
@@ -68,7 +70,7 @@ quillyos-knowledge-base/  — Persistent Memory
     ├── iterations/
     └── failed_attempts/
 
-picoclaw-skills/          — Skills Library
+picoclaw-skills/          — Skills Library (Stores capability)
     ├── skills/
     │   ├── business/
     │   ├── affiliate/
@@ -96,7 +98,7 @@ picoclaw-skills/          — Skills Library
     ├── manifests/
     └── docs/
 
-picoclaw-dev/             — Runtime / Agent
+picoclaw-dev/             — Runtime / Agent (Executes capability)
     ├── runtime/
     ├── agents/
     ├── memory/
@@ -111,6 +113,37 @@ picoclaw-dev/             — Runtime / Agent
     ├── plugins/
     └── config/
 ```
+
+---
+
+## GOVERNANCE
+
+Repositories do not compete. Each owns one responsibility.
+
+| Layer | Repository | Responsibility |
+|-------|------------|---------------|
+| Philosophy | quillyos-foundation | Defines the immutable vision |
+| Translation | quillyos-nexus | Defines how systems communicate |
+| Evidence | quillyos-knowledge-base | Stores all discoveries |
+| Capability | picoclaw-skills | Packages executable functions |
+| Execution | picoclaw-dev | Runs capabilities |
+| Extension | Hardware | Extends physical capability |
+| Wisdom | Human collaboration | Provides judgment and direction |
+
+Governance emerges from interaction rather than centralization.
+
+---
+
+## PROGRESSIVE CAPABILITY
+
+The protocol scales across all compute tiers without modification:
+
+```
+phone → Termux → PicoClaw → Raspberry Pi → clusters →
+future heterogeneous compute → future quantum-assisted infrastructure
+```
+
+Capability increases. Protocol remains identical.
 
 ---
 
