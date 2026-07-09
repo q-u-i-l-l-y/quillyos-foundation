@@ -1,12 +1,12 @@
 # QUILLYOS // ARCHITECTURE
-## Version 4.1 — Living Document
+## Version 4.2 — Living Document
 ### Status: Canonical Truth
 
 ---
 
-## THE FIVE REPOSITORIES
+## THE SEVEN REPOSITORIES
 
-The ecosystem is organized into five canonical repositories, each with a single,
+The ecosystem is organized into seven canonical repositories, each with a single,
 well-defined responsibility. The Hub (Quilly) reasons across them through the
 Nexus Protocol.
 
@@ -28,7 +28,7 @@ quillyos-foundation/      — Canonical Truth (Defines philosophy)
         ├── decision-framework.md
         └── reasoning-principles.md
 
-quillyos-nexus/           — Translation Layer (Defines translation)
+quillyos-nexus/           — Translation Layer (Defines communication)
     ├── SPEC.md
     ├── NEXUS_PROTOCOL.md
     ├── SUPERPOSITION.md
@@ -64,6 +64,10 @@ quillyos-knowledge-base/  — Persistent Memory (Stores evidence)
     ├── medical/
     ├── metamaterials/
     ├── quantum/
+    ├── casimir/
+    ├── ornith/
+    ├── origin_pilot/
+    ├── molecular_3d_printing/
     ├── agents/
     ├── decision_logs/
     ├── lessons/
@@ -94,11 +98,13 @@ picoclaw-skills/          — Skills Library (Stores capability)
     │   ├── medical/
     │   ├── quantum/
     │   ├── metamaterials/
+    │   ├── casimir/
+    │   ├── ornith/
     │   └── ethics/
     ├── manifests/
     └── docs/
 
-picoclaw-dev/             — Runtime / Agent (Executes capability)
+picoclaw-dev/             — Runtime / Agent (Executes capability locally)
     ├── runtime/
     ├── agents/
     ├── memory/
@@ -112,6 +118,23 @@ picoclaw-dev/             — Runtime / Agent (Executes capability)
     ├── decision/
     ├── plugins/
     └── config/
+
+n8n/                      — Execution Layer (Orchestrates workflows)
+    ├── workflows/
+    ├── credentials/
+    ├── webhooks/
+    ├── templates/
+    └── docs/
+
+quillyos-roadmap/         — Evolution Tracker (Tracks milestones)
+    ├── README.md
+    ├── current_phase.md
+    ├── milestones/
+    ├── dependencies/
+    ├── risks/
+    ├── completed/
+    ├── upcoming/
+    └── architecture_evolution.md
 ```
 
 ---
@@ -126,8 +149,9 @@ Repositories do not compete. Each owns one responsibility.
 | Translation | quillyos-nexus | Defines how systems communicate |
 | Evidence | quillyos-knowledge-base | Stores all discoveries |
 | Capability | picoclaw-skills | Packages executable functions |
-| Execution | picoclaw-dev | Runs capabilities |
-| Extension | Hardware | Extends physical capability |
+| Execution | picoclaw-dev | Runs capabilities locally |
+| Orchestration | n8n | Executes workflows and automations |
+| Evolution | quillyos-roadmap | Tracks milestones and architecture changes |
 | Wisdom | Human collaboration | Provides judgment and direction |
 
 Governance emerges from interaction rather than centralization.
