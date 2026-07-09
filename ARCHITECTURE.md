@@ -119,7 +119,7 @@ picoclaw-dev/             — Runtime / Agent (Executes capability locally)
     ├── plugins/
     └── config/
 
-n8n/                      — Execution Layer (Orchestrates workflows)
+quillyos-n8n/             — Execution Layer (Orchestrates workflows)
     ├── workflows/
     ├── credentials/
     ├── webhooks/
@@ -150,7 +150,7 @@ Repositories do not compete. Each owns one responsibility.
 | Evidence | quillyos-knowledge-base | Stores all discoveries |
 | Capability | picoclaw-skills | Packages executable functions |
 | Execution | picoclaw-dev | Runs capabilities locally |
-| Orchestration | n8n | Executes workflows and automations |
+| Orchestration | quillyos-n8n | Executes workflows and automations |
 | Evolution | quillyos-roadmap | Tracks milestones and architecture changes |
 | Wisdom | Human collaboration | Provides judgment and direction |
 
