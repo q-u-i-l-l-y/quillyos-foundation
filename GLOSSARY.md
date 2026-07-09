@@ -1,5 +1,5 @@
 # QUILLYOS // GLOSSARY
-## Version 4.1 — Living Document
+## Version 4.2 — Living Document
 ### Status: Canonical Truth
 
 ---
@@ -35,6 +35,21 @@
 | **Cross-domain Correlation** | The process of linking evidence across medicine, engineering, logistics, and materials science |
 | **Protocol Evolution** | The continuous improvement of the Nexus Protocol while maintaining backward compatibility |
 | **Knowledge Immortality** | The principle that no knowledge is lost — every discovery is preserved with full context |
+| **Instagram Pipeline** | The workflow that transforms saved social content into structured knowledge |
+| **Architectural Agnosticism** | The design principle that the system absorbs future breakthroughs without redesign |
+| **Casimir MicroSPARC** | Quantum vacuum energy harvesting chip — 5mm², 1.5V @ 25µA, ~40µW continuous |
+| **Ornith-1.0** | Open-source agentic coding LLM with two-stage learnable pipeline — MIT license |
+| **Origin Pilot OS** | Quantum-classical orchestration OS from Origin Quantum — powers WuKong |
+| **WuKong** | 198-qubit superconducting quantum computer (72 functional + 126 coupler) |
+| **Tianji 4.0** | Room-temperature quantum control system using filtered microwave lines and Pi pulses |
+| **Molecular 3D Printing** | Research domain: quantum modeling of superposition waveform collapse for controlled material design |
+| **Quasi-particle Detection** | Research domain: using quantum interaction data as measurable maps for material and health sensing |
+| **Self-scaffolding** | Ornith-1.0's two-stage pipeline: Stage 1 generates workflow scaffold, Stage 2 executes |
+| **QUBO** | Quadratic Unconstrained Binary Optimization — problem formulation for quantum annealers |
+| **PUBO** | Polynomial Unconstrained Binary Optimization — higher-order QUBO generalization |
+| **QPanda3** | Origin Quantum's Python framework — 32-qubit local simulation |
+| **DARPA DSO** | Defense Sciences Office — funded early Casimir cavity research |
+| **Limitless Space Institute** | Nonprofit incubator for Casimir technology |
 
 ---
 
