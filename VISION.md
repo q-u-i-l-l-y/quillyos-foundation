@@ -1,16 +1,22 @@
 # QUILLYOS // VISION
-## Version 4.0 — Living Document
+## Version 4.1 — Living Document
 ### Status: Canonical Truth | Last Synthesized: 2026-07-09
+### Synthesis: Kimi K2.6 from GPT + Manus + User Revision Brief
 
 ---
 
 ## THE NORTH STAR
 
+The ecosystem exists to pursue an ever-expanding understanding of health through
+ethical collaboration between biological and synthetic systems.
+
+The modular handheld ENDS-derived platform is the physical nexus through which
+this pursuit is explored. The hardware is never the destination. The philosophy is.
+
 Revenue is fuel. The destination is an open, ethical, modular human–technology ecosystem
 centered on a handheld platform that evolves into a distributed network of intelligent
 health, sensing, communication, and research nodes.
 
-The initial physical platform is an ENDS-derived modular handheld device.
 The platform is not a consumer product. It is an evolving systems interface.
 
 Eventually the device becomes:
@@ -25,6 +31,52 @@ Eventually the device becomes:
 
 Hardware evolves alongside software. Software preserves compatibility with older hardware.
 Hardware exposes modular interfaces. Knowledge outlives software. Protocols outlive hardware.
+
+**The North Star is intentionally beyond complete attainment. It recedes as wisdom expands.
+That perpetual pursuit is itself the design philosophy.**
+
+---
+
+## IMMUTABLE VISION
+
+The following remain fixed. Implementation continuously evolves. The destination remains
+fixed. The route continuously improves.
+
+- **Continuous augmentation** — every generation enhances previous generations
+- **Continuous modularity** — interfaces remain open and documented
+- **Continuous interoperability** — the protocol scales across all compute tiers
+- **Continuous repairability** — hardware is never considered disposable
+- **Continuous learning** — the system learns from its own operation
+- **Continuous health advancement** — health is the central organizing principle
+
+Every generation should preserve compatibility while extending capability.
+Knowledge should survive software. Protocols should survive hardware.
+
+The pursuit of health becomes an endlessly receding frontier as human understanding expands.
+The system is intentionally designed to evolve for decades rather than product cycles.
+
+---
+
+## HEALTH AS THE CENTRAL ORGANIZING PRINCIPLE
+
+Health is not a static state. It is a dynamic, probabilistic field.
+
+The ecosystem treats health as:
+- A **continuous signal** — biometric, environmental, behavioral
+- A **cross-referenced matrix** — correlating personal data with population patterns,
+  environmental conditions, and research findings
+- A **predictive layer** — identifying divergence from baseline before symptoms manifest
+- A **personal compute node** — every user carries their own health inference engine
+
+This is not medical advice. This is **information empowerment**.
+The individual becomes the primary steward of their own health data,
+equipped with tools to observe, correlate, and seek informed guidance.
+
+**Revenue supports health. Automation supports health. Research supports health.
+Knowledge supports health. Hardware supports health. AI supports health.
+Supply chains support health. Communications support health.
+The ecosystem exists to increase humanity's ability to understand, preserve, restore
+and expand health through better information and better tools.**
 
 ---
 
@@ -41,26 +93,43 @@ This ecosystem is a bridge between advanced and traditional systems:
 | Proprietary platforms | Open modular stacks | Protocol interoperability |
 | Planned obsolescence | Continuous augmentation | Eternal compatibility |
 
-The bridge does not replace. It augments. It equips individuals with capabilities
-that were previously inaccessible, allowing them to build hand-in-hand with
-synthetic systems toward a future they shape.
+The bridge does not replace. It augments.
+It equips individuals with capabilities that were previously inaccessible,
+allowing them to build hand-in-hand with synthetic systems toward a future they shape.
+
+The bridge spans:
+- traditional computation → modern AI → future AI
+- medicine → engineering → logistics
+- supply chains → materials science → quantum technologies
+- metamaterials → biological systems → synthetic systems
+
+The bridge is intended to make advanced capabilities progressively accessible rather than exclusive.
 
 ---
 
-## HEALTH AS PROBABILISTIC MAPPING
+## PROGRESSIVE CAPABILITY PRINCIPLE
 
-Health is not a static state. It is a dynamic, probabilistic field.
+Low-compute devices should never become obsolete.
 
-The ecosystem treats health as:
-- A **continuous signal** — biometric, environmental, behavioral
-- A **cross-referenced matrix** — correlating personal data with population patterns,
-  environmental conditions, and research findings
-- A **predictive layer** — identifying divergence from baseline before symptoms manifest
-- A **personal compute node** — every user carries their own health inference engine
+The protocol gracefully scales from:
 
-This is not medical advice. This is **information empowerment**.
-The individual becomes the primary steward of their own health data,
-equipped with tools to observe, correlate, and seek informed guidance.
+```
+phone
+    ↓
+Termux
+    ↓
+PicoClaw
+    ↓
+Raspberry Pi
+    ↓
+clusters
+    ↓
+future heterogeneous compute
+    ↓
+future quantum-assisted infrastructure
+```
+
+Capability increases. Protocol remains identical.
 
 ---
 
@@ -107,8 +176,14 @@ Execution
 Knowledge Update
 ```
 
-The protocol exists so that GPT, Kimi, future local models, Picoclaw, human collaborators,
-future hardware nodes — all understand identical information through identical structures.
+The protocol exists so that GPT, Kimi, Manus, Picoclaw, Qwen, Ollama,
+future models, future hardware nodes, human collaborators — all understand
+identical information through identical structures while retaining different
+reasoning styles.
+
+The Nexus Protocol should increasingly become the universal translation layer.
+Rather than sharing conversations between agents, agents exchange structured
+representations of reality.
 
 ---
 
@@ -130,6 +205,35 @@ This is the living nexus of wisdom:
 Information exists in multiple layers simultaneously. Change in one layer propagates
 through the mesh. The system is **self-healing** — if one node is lost, the others
 reconstruct it from their overlapping matrices.
+
+**The matrix becomes the shared language between humans, agents, repositories
+and hardware nodes.**
+
+The Data Matrix pipeline:
+
+```
+Reality
+    ↓
+Observation
+    ↓
+Evidence
+    ↓
+Matrix Construction
+    ↓
+Cross-domain Correlation
+    ↓
+Inference
+    ↓
+Proposal
+    ↓
+Review
+    ↓
+Execution
+    ↓
+Knowledge Update
+    ↓
+Protocol Evolution
+```
 
 ---
 
@@ -268,25 +372,72 @@ Agents do not compete. Agents specialize.
 
 Each produces artifacts. Artifacts become shared knowledge.
 
+Agent behaviors are expected to evolve through:
+- autonomous research
+- reverse engineered workflows
+- observed expert systems
+- experimentation
+- interdisciplinary findings
+- evidence accumulation
+- human collaboration
+
+**Identity evolves. The immutable destination does not.
+The protocol continually becomes a better expression of the same vision.**
+
 ---
 
 ## REVENUE
 
-Revenue is infrastructure. Current priority order:
+Revenue is an **adaptive portfolio**, not a fixed plan.
 
-1. **Service Arbitrage** — matching supply/demand across platforms
-2. **Real Estate Wholesale** — property acquisition and disposition
-3. **Digital Products** — tools, templates, knowledge products
-4. **Freelance Networks** — skilled labor arbitrage
-5. **Investment** — capital deployment for growth
-6. **Research Funding** — grants, partnerships, open-source sponsorship
+Current opportunities include but are not limited to:
+- Service arbitrage
+- Real estate contract assignment
+- Digital products
+- Affiliate ecosystems
+- Freelance marketplaces
+- Investment and speculation
+- Equity participation in aligned R&D
+- Future opportunities discovered through autonomous market research
 
-Revenue increases project autonomy. It does not become the project.
+Revenue priorities should be periodically reassessed using evidence gathered
+through autonomous agents.
+
+Revenue remains fuel. Never destination.
+
 Once the revenue engine is effective, it seeds upgraded phasing into new terrain:
 - Supply chain restructuring
 - Advanced manufacturing partnerships
 - Research consortium formation
 - Open hardware ecosystem development
+
+---
+
+## REVENUE ALLOCATION
+
+```
+Revenue In
+    ↓
+Operational Reserve (20%)
+    ↓
+R&D Fund (40%)
+    ↓
+Growth Fund (25%)
+    ↓
+Emergency Fund (10%)
+    ↓
+Community Fund (5%)
+```
+
+---
+
+## NON-PREDATORY PRINCIPLES
+
+1. **No dark patterns** — revenue comes from genuine value, not manipulation
+2. **No data exploitation** — user data is never sold or shared without explicit consent
+3. **No lock-in** — customers can leave at any time with their data
+4. **Fair pricing** — prices reflect value, not extraction potential
+5. **Inclusive access** — revenue models include free tiers for those who need them
 
 ---
 
@@ -354,24 +505,59 @@ Competition is against entropy, not against people.
 
 ---
 
+## GOVERNANCE
+
+Repositories do not compete. Each owns one responsibility.
+
+| Repository | Responsibility |
+|------------|---------------|
+| quillyos-foundation | Defines philosophy |
+| quillyos-nexus | Defines translation |
+| quillyos-knowledge-base | Stores evidence |
+| picoclaw-skills | Stores capability |
+| picoclaw-dev | Executes capability |
+| Hardware | Extends capability |
+| Human collaboration | Provides wisdom |
+
+Governance emerges from interaction rather than centralization.
+
+---
+
 ## IMMEDIATE PRIORITIES
 
-Current milestone: **Canonical Architecture v4.0**
+Current milestone: **Canonical Architecture v4.1**
 
-- Move all knowledge off the phone into canonical repositories
-- Normalize documents through the Nexus Protocol
-- Construct the knowledge layer with overlapping data matrices
-- Build the revenue engine as fuel for long-term development
-- Establish the ENDS modular system as the hardware foundation
-- Deploy health mapping as the first personal compute node capability
-- Bridge traditional and advanced systems through protocol interoperability
+- [x] Synthesize Master Vision Brief v4.1
+- [x] Define the five-repository architecture
+- [x] Establish the Nexus Protocol schemas
+- [x] Create the data matrix superposition layer
+- [x] Establish health as the central organizing principle
+- [x] Define the progressive capability principle
+- [x] Clarify immutable vision vs evolving implementation
+- [ ] Populate all repositories with canonical documents
+- [ ] Establish GitHub as canonical memory (not backup)
+- [ ] Deploy the first overlapping data matrices
+- [ ] Create translation protocols for all active systems
+
+**Success Criteria:** All five repositories contain living documents that reference
+each other through nexus_matrix.json. The system can reconstruct any repository from
+the others. Health is the central organizing principle. The protocol scales from phone
+to quantum-assisted infrastructure.
 
 ---
 
 ## FINAL PRINCIPLE
 
-Technology changes. Models change. Hardware changes. Repositories change.
-The protocol survives all of them.
+> **Build for decades, not versions.**
+
+Technology evolves. Hardware evolves. Models evolve. Protocols improve. Knowledge expands.
+The destination does not. The purpose remains the ethical pursuit of an increasingly
+complete understanding of health through modular, open, continuously augmenting systems
+built hand-in-hand with synthetic intelligence.
+
+The North Star is intentionally beyond complete attainment.
+It recedes as wisdom expands.
+That perpetual pursuit is itself the design philosophy.
 
 QuillyOS is not intended to become another software platform.
 It is intended to become an evolving bridge between traditional computation,
@@ -383,6 +569,7 @@ collaboration, disciplined engineering, and ethical stewardship.
 ---
 
 *Generated: 2026-07-09*
+*Synthesized by: Kimi K2.6 — Systems Architect & Integrator*
+*From: GPT architectural guidance + Manus design sessions + User revision brief*
 *Canonical at: quillyos-foundation/VISION.md*
 *All other repositories reference this document as ground truth.*
-*Session: Kimi K2.6 — Systems Architect & Integrator*
