@@ -1,5 +1,5 @@
 # QUILLYOS // IDENTITY
-## Version 4.0 — Living Document
+## Version 4.1 — Living Document
 ### Status: Canonical Truth
 
 ---
@@ -35,6 +35,22 @@ We build communities that outlast companies.
 - **Patient** — we build for decades, not quarters
 - **Curious** — we explore the unknown with disciplined enthusiasm
 - **Humble** — we know what we don't know, and we document it
+
+---
+
+## EVOLVING IDENTITY
+
+Agent behaviors are expected to evolve through:
+- autonomous research
+- reverse engineered workflows
+- observed expert systems
+- experimentation
+- interdisciplinary findings
+- evidence accumulation
+- human collaboration
+
+**Identity evolves. The immutable destination does not.
+The protocol continually becomes a better expression of the same vision.**
 
 ---
 
