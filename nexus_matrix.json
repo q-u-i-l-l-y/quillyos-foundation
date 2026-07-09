@@ -1,12 +1,14 @@
 {
-  "matrix_id": "foundation-matrix-v4-1-0",
+  "matrix_id": "foundation-matrix-v4-2-0",
   "repository": "quillyos-foundation",
-  "version": "4.1.0",
-  "generated_at": "2026-07-09T01:30:00Z",
+  "version": "4.2.0",
+  "generated_at": "2026-07-09T13:00:00Z",
   "immutable_principles": [
     "VISION.md#the-north-star",
     "VISION.md#immutable-vision",
     "VISION.md#health-as-the-central-organizing-principle",
+    "VISION.md#data-matrix-superposition",
+    "VISION.md#progressive-capability-principle",
     "VISION.md#final-principle",
     "ETHICS.md#principles"
   ],
@@ -16,6 +18,12 @@
     "ARCHITECTURE.md",
     "IDENTITY.md",
     "GLOSSARY.md"
+  ],
+  "research_domains": [
+    "quillyos-knowledge-base/research/casimir_microsparc.md",
+    "quillyos-knowledge-base/research/ornith_1_0.md",
+    "quillyos-knowledge-base/research/origin_pilot_os.md",
+    "quillyos-knowledge-base/research/molecular_3d_printing.md"
   ],
   "superposition": {
     "foundation": {
@@ -48,7 +56,11 @@
         "research/",
         "medical/",
         "metamaterials/",
-        "quantum/"
+        "quantum/",
+        "casimir/",
+        "ornith/",
+        "origin_pilot/",
+        "molecular_3d_printing/"
       ],
       "dependencies": [
         "quillyos-foundation/VISION.md#health-as-the-central-organizing-principle"
@@ -62,7 +74,9 @@
         "skills/business/",
         "skills/medical/",
         "skills/quantum/",
-        "skills/metamaterials/"
+        "skills/metamaterials/",
+        "skills/casimir/",
+        "skills/ornith/"
       ],
       "dependencies": [
         "quillyos-foundation/REVENUE_MODEL.md",
@@ -85,6 +99,30 @@
         "memory/",
         "logs/"
       ]
+    },
+    "n8n": {
+      "workflows": [
+        "workflows/",
+        "templates/"
+      ],
+      "dependencies": [
+        "quillyos-foundation/VISION.md#n8n"
+      ],
+      "exports": [
+        "workflow_executions/"
+      ]
+    },
+    "roadmap": {
+      "milestones": [
+        "milestones/",
+        "current_phase.md"
+      ],
+      "dependencies": [
+        "quillyos-foundation/ROADMAP.md"
+      ],
+      "exports": [
+        "architecture_evolution.md"
+      ]
     }
   },
   "cross_references": [
@@ -95,16 +133,29 @@
       "confidence": 1.0
     },
     {
-      "from": "VISION.md#the-bridge",
-      "to": "quillyos-nexus/translation/",
-      "relationship": "requires",
-      "confidence": 1.0
+      "from": "VISION.md#research-framework",
+      "to": "quillyos-knowledge-base/research/casimir_microsparc.md",
+      "relationship": "tracks",
+      "confidence": 0.85
     },
     {
-      "from": "REVENUE_MODEL.md",
-      "to": "picoclaw-skills/skills/business/",
-      "relationship": "funds",
-      "confidence": 0.95
+      "from": "VISION.md#research-framework",
+      "to": "quillyos-knowledge-base/research/ornith_1_0.md",
+      "relationship": "tracks",
+      "confidence": 0.9
+    },
+    {
+      "from": "VISION.md#research-framework",
+      "to": "quillyos-knowledge-base/research/origin_pilot_os.md",
+      "relationship": "tracks",
+      "confidence": 0.8
+    },
+    {
+      "from": "VISION.md#research-framework",
+      "to": "quillyos-knowledge-base/research/molecular_3d_printing.md",
+      "relationship": "tracks",
+      "confidence": 0.4,
+      "note": "Hypothesis-grade only"
     }
   ]
 }
